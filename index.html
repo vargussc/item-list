@@ -301,6 +301,7 @@
         var counter = 0;
         var elem = document.getElementById("changeText");
         var inst = setInterval(change, 210000);
+	change()
 
         function change() {
           elem.innerHTML = text[counter];
