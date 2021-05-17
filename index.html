@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"  style="background-image: url('https://raw.githubusercontent.com/vargussc/item-list/master/twitch-profile-banner-1920x480-blank3.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
-        <a class="navbar-brand" href="#" style="font-family:CafeNero">Vargus Muffalo Shaman</a>
+        <a class="navbar-brand" href="#" style="font-family:CafeNero" id="changeText">Vargus</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -293,6 +293,21 @@
                 }
                 return allow;
             });
+        }
+
+	    
+	var text = ["Vargus SC", "Vargus Muffalo Shaman", "BouncyVargus", "Bikini Vargus", "BigTopVargus", "ogVargus", "VargusPawnHub", "VargusOnlyFans", "StepVargus"];
+        var counter = 0;
+        var elem = document.getElementById("changeText");
+        var inst = setInterval(change, 210000);
+
+        function change() {
+          elem.innerHTML = text[counter];
+          counter++;
+          if (counter >= text.length) {
+            counter = 0;
+            // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+          }
         }
     </script>
     <script type="text/javascript">
